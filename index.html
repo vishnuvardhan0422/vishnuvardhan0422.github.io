@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vishnu Patlolla | Staff QA Engineer & SDET</title>
+<meta name="description" content="Vishnu Patlolla: Staff QA Engineer and SDET building API and mobile test automation, performance testing, CI/CD pipelines, compliance checks, and AI-driven QA tooling.">
+<style>
+  :root {
+    --bg: #000; --card: #0f0f12; --card-2: #141418; --line: #26262e;
+    --text: #fff; --muted: #9b9ba6; --purple: #a855f7; --pink: #ec4899;
+    --green: #4ade80; --green-bg: #0f2a1a; --green-line: #1f5a36;
+    --grad: linear-gradient(90deg, #a855f7, #ec4899);
+    --radius: 14px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  a { color: var(--purple); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  section { padding: 88px 0; }
+  h1, h2, h3 { margin: 0; line-height: 1.2; }
+
+  /* section headings, centred like the reference */
+  .sec-head { text-align: center; margin-bottom: 48px; }
+  .sec-head h2 { font-size: clamp(30px, 4vw, 44px); font-weight: 800; letter-spacing: -.01em; }
+  .sec-head p { color: var(--muted); max-width: 720px; margin: 14px auto 0; }
+  .bar { width: 90px; height: 4px; border-radius: 4px; background: var(--grad); margin: 18px auto 0; }
+  .sub-head { text-align: center; font-size: 22px; font-weight: 700; margin: 40px 0 22px;
+    background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+  /* nav */
+  nav { position: sticky; top: 0; z-index: 20; background: rgba(0,0,0,.85); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 64px; gap: 20px; }
+  .logo { font-weight: 800; font-size: 22px; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  nav ul { display: flex; gap: 26px; list-style: none; margin: 0; padding: 0; font-size: 15px; }
+  nav ul a { color: #d4d4dc; }
+  nav ul a:hover { color: #fff; text-decoration: none; }
+  @media (max-width: 860px) { nav ul { gap: 14px; font-size: 13px; overflow-x: auto; white-space: nowrap; max-width: 62vw; } nav .wrap { gap: 10px; } }
+
+  /* hero */
+  .hero { padding: 96px 0 80px; }
+  .hero .eyebrow { color: #c084fc; font-size: 15px; font-weight: 600; }
+  .hero h1 { font-size: clamp(44px, 7vw, 76px); font-weight: 800; letter-spacing: -.02em; margin-top: 8px; }
+  .hero .role { font-size: clamp(18px, 2.4vw, 24px); color: #d6d6de; margin-top: 14px; }
+  .hero .pitch { max-width: 720px; color: var(--muted); margin-top: 18px; }
+  .meta { color: var(--muted); font-size: 14px; margin-top: 18px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .btn { display: inline-block; padding: 12px 22px; border-radius: 10px; border: 1px solid #33333d; color: #fff; font-weight: 600; font-size: 15px; background: var(--card); }
+  .btn.primary { background: var(--grad); border-color: transparent; }
+  .btn:hover { text-decoration: none; filter: brightness(1.1); }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 56px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; text-align: center; }
+  .stat b { display: block; font-size: 34px; font-weight: 800; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat span { color: var(--muted); font-size: 14px; }
+
+  /* about */
+  .about { padding-top: 40px; }
+  .about .wrap { max-width: 860px; }
+  .about p { color: var(--muted); margin: 0 0 16px; font-size: 17px; }
+  .about strong { color: #fff; }
+
+  /* AI */
+  .ai-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; }
+  .ai-card { background: linear-gradient(160deg, #1a1030 0%, var(--card) 70%); border: 1px solid #3b1f5c; border-radius: var(--radius); padding: 24px; }
+  .ai-card h3 { font-size: 18px; color: #e9d5ff; margin-bottom: 8px; }
+  .ai-card p { color: var(--muted); margin: 0; font-size: 15px; }
+
+  /* skills */
+  .skill-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .skill { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; }
+  .skill-top { display: flex; gap: 16px; align-items: center; }
+  .icon { flex: 0 0 56px; height: 56px; border-radius: 12px; background: #1f1433; display: grid; place-items: center; }
+  .icon svg { width: 26px; height: 26px; stroke: #c084fc; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .skill h3 { font-size: 17px; font-weight: 700; }
+  .level { color: var(--muted); font-size: 14px; margin-top: 2px; }
+  .meter { height: 6px; background: #1d1d25; border-radius: 6px; margin-top: 18px; overflow: hidden; }
+  .meter span { display: block; height: 100%; border-radius: 6px; background: var(--grad); }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .tag { font-size: 13px; padding: 4px 10px; border-radius: 999px; background: #17171f; border: 1px solid #2c2c38; color: #d8d8e0; }
+
+  /* experience timeline */
+  .timeline { position: relative; max-width: 860px; margin: 0 auto; padding-left: 40px; }
+  .timeline::before { content: ""; position: absolute; left: 14px; top: 8px; bottom: 8px; width: 2px; background: #2a2a34; }
+  .job { position: relative; margin-bottom: 26px; }
+  .job::before { content: ""; position: absolute; left: -33px; top: 26px; width: 22px; height: 22px; border-radius: 50%; border: 3px solid var(--purple); background: var(--bg); box-shadow: 0 0 14px rgba(168,85,247,.5); }
+  .job-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 24px 26px; }
+  .when { color: #c084fc; font-weight: 600; font-size: 15px; }
+  .job h3 { font-size: 21px; font-weight: 700; margin: 6px 0 4px; }
+  .org { color: #a1a1aa; font-size: 16px; }
+  .job ul { margin: 14px 0 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .job li { margin: 5px 0; }
+  .pill { display: inline-block; margin-top: 14px; padding: 8px 16px; border-radius: 999px; background: var(--green-bg); border: 1px solid var(--green-line); color: var(--green); font-weight: 600; font-size: 14px; }
+
+  /* projects */
+  .filters { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 30px; }
+  .filter { background: var(--card); border: 1px solid #2c2c38; color: #c7c7d0; padding: 8px 16px; border-radius: 999px; font: inherit; font-size: 14px; cursor: pointer; }
+  .filter.active, .filter:hover { color: #fff; border-color: var(--purple); background: #1c1230; }
+  .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 18px; }
+  .project { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; display: flex; flex-direction: column; }
+  .project[hidden] { display: none; }
+  .project[data-cat="ai"] { order: -1; }
+  .project.highlight { border-color: var(--purple); box-shadow: 0 0 0 1px rgba(168,85,247,.35) inset; }
+  .kicker { color: #c084fc; font-size: 12px; text-transform: uppercase; letter-spacing: .1em; font-weight: 700; }
+  .project h3 { font-size: 20px; margin: 10px 0; }
+  .project p { color: var(--muted); margin: 0 0 12px; font-size: 15px; }
+  .project ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 15px; }
+  .project li { margin: 4px 0; }
+  .project .pill { margin-top: 16px; align-self: flex-start; }
+  .project .tags { margin-top: auto; padding-top: 16px; }
+
+  /* contact */
+  .contact { text-align: center; }
+  .contact .lead { color: var(--muted); max-width: 640px; margin: 0 auto 30px; }
+  .contact .btns { justify-content: center; }
+  footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="logo" href="#top">VP</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#ai">AI</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="https://www.linkedin.com/in/vishnu-patlolla22/">LinkedIn</a>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Hello, I'm</div>
+    <h1>Vishnu Patlolla</h1>
+    <div class="role">Staff QA Engineer · SDET · AI-Powered Quality Architect</div>
+    <p class="pitch">10+ years across gaming, healthcare, financial services, and government. I build API and mobile test automation, performance testing, CI/CD pipelines, compliance checks, and AI-driven QA tooling.</p>
+    <div class="meta">Vancouver, BC · Canadian citizen · Open to US relocation</div>
+    <div class="btns">
+      <a class="btn primary" href="#projects">View Work</a>
+      <a class="btn" href="Vishnu_Patlolla_Resume.pdf">Download resume (PDF)</a>
+      <a class="btn" href="#contact">Let's Work Together</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>10+</b><span>years in QA, test automation, and development</span></div>
+      <div class="stat"><b>15+</b><span>backend microservices under test</span></div>
+      <div class="stat"><b>8</b><span>CI/CD pipelines built and maintained</span></div>
+      <div class="stat"><b>25+</b><span>Claude Code agents and skills for QA</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="sec-head" style="text-align:left;margin-bottom:24px">
+      <h2 style="font-size:36px">About</h2>
+      <div class="bar" style="margin-left:0"></div>
+    </div>
+    <p>I started as a software developer in 2015 and moved into test automation. I still build pipelines and developer tooling, and I've worked across gaming, healthcare, financial services, and government.</p>
+    <p>At Fortis Games, I was the sole QA architect for a cloud-native services platform used by multiple game titles. I built the automation from zero, validated features before game-team integration, and ran the sprint and release process that teams use.</p>
+    <p><strong>What I care about:</strong> tests that are reliable enough to trust, failures that tell people what went wrong, and tooling that removes repetitive work.</p>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>AI-Driven QA &amp; Engineering</h2>
+      <p>I built 25+ Claude Code agents and skills at Fortis that take over repetitive QA work, so engineers spend more time on what matters.</p>
+      <div class="bar"></div>
+    </div>
+    <div class="ai-grid">
+      <div class="ai-card"><h3>Self-fixing E2E</h3><p>An automated agent checks E2E failures and fixes them without manual intervention.</p></div>
+      <div class="ai-card"><h3>Claude models and MCP</h3><p>Connected Claude to Git, Slack, Singular, ClickHouse, Notion, and Jira through MCP, and set up automated flows across them.</p></div>
+      <div class="ai-card"><h3>Mergemon built with Claude LLMs</h3><p>The game was built with Claude LLMs, and its automation was set up by a bot that learns from and fixes issues.</p></div>
+      <div class="ai-card"><h3>Playwright with MCP</h3><p>Used the Playwright MCP server with Claude Code to author and debug web E2E tests.</p></div>
+      <div class="ai-card"><h3>Test authoring agent</h3><p>An 11-step guided agent (api-test-writer-v2) that takes engineers from branch to spec, PR, CI monitoring, and failure triage, with coding standards enforced.</p></div>
+      <div class="ai-card"><h3>Telemetry inspection skill</h3><p>Queries ClickHouse directly, resolves player IDs and time ranges, runs spec-vs-actual data-quality checks, and is used across 10+ game projects.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Skills &amp; Expertise</h2>
+      <p>The tools I use most, grouped by how I apply them.</p>
+      <div class="bar"></div>
+    </div>
+
+    <div class="sub-head">Test Automation &amp; Quality</div>
+    <div class="skill-grid">
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg></div>
+          <div><h3>Playwright, WebdriverIO, Appium</h3><div class="level">Expert</div></div>
+        </div>
+        <div class="meter"><span style="width:95%"></span></div>
+        <div class="tags"><span class="tag">Playwright (incl. MCP)</span><span class="tag">WebdriverIO</span><span class="tag">Appium</span><span class="tag">Cypress</span><span class="tag">Selenium</span><span class="tag">Playmode</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div>
+          <div><h3>BDD, Unit &amp; Framework Tooling</h3><div class="level">Advanced</div></div>
+        </div>
+        <div class="meter"><span style="width:85%"></span></div>
+        <div class="tags"><span class="tag">Cucumber / BDD</span><span class="tag">Mocha / Chai</span><span class="tag">RestAssured</span><span class="tag">Robot Framework</span><span class="tag">PyTest</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+          <div><h3>APIs, Performance &amp; Compliance</h3><div class="level">Expert</div></div>
+        </div>
+        <div class="meter"><span style="width:92%"></span></div>
+        <div class="tags"><span class="tag">REST</span><span class="tag">Postman</span><span class="tag">k6</span><span class="tag">API backward compatibility</span><span class="tag">OAuth2 / JWT</span><span class="tag">OIDC</span><span class="tag">OneTrust</span><span class="tag">GDPR</span><span class="tag">COPPA</span></div>
+      </div>
+    </div>
+
+    <div class="sub-head">Engineering &amp; Infrastructure</div>
+    <div class="skill-grid">
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 12h4l2-6 4 12 2-6h4"/></svg></div>
+          <div><h3>Languages</h3><div class="level">Expert</div></div>
+        </div>
+        <div class="meter"><span style="width:92%"></span></div>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">JavaScript</span><span class="tag">Python</span><span class="tag">Java</span><span class="tag">C#</span><span class="tag">.NET MVC</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M7 18a4 4 0 010-8 5 5 0 019.5-1A4 4 0 0118 18z"/></svg></div>
+          <div><h3>CI/CD &amp; Infrastructure</h3><div class="level">Expert</div></div>
+        </div>
+        <div class="meter"><span style="width:90%"></span></div>
+        <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Azure DevOps</span><span class="tag">Jenkins</span><span class="tag">Unity Cloud Build</span><span class="tag">TestFlight / AppCenter</span><span class="tag">Sauce Labs</span><span class="tag">Docker</span><span class="tag">Kubernetes</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/></svg></div>
+          <div><h3>Data, Analytics &amp; Ads</h3><div class="level">Advanced</div></div>
+        </div>
+        <div class="meter"><span style="width:82%"></span></div>
+        <div class="tags"><span class="tag">ClickHouse</span><span class="tag">Singular</span><span class="tag">AppLovin MAX</span><span class="tag">Firebase</span><span class="tag">MongoDB</span><span class="tag">PostgreSQL</span><span class="tag">MS SQL</span><span class="tag">Grafana</span><span class="tag">Allure</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/><path d="M10 7h4v4h-4zM7 10v4h4"/></svg></div>
+          <div><h3>Packages &amp; Monorepos</h3><div class="level">Advanced</div></div>
+        </div>
+        <div class="meter"><span style="width:80%"></span></div>
+        <div class="tags"><span class="tag">Lerna / npm monorepos</span><span class="tag">Private npm publishing (Nexus)</span><span class="tag">Unity</span><span class="tag">Jira</span></div>
+      </div>
+    </div>
+
+    <div class="sub-head">AI &amp; Tooling</div>
+    <div class="skill-grid">
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><rect x="5" y="8" width="14" height="10" rx="2"/><path d="M12 4v4M9 13h.01M15 13h.01"/></svg></div>
+          <div><h3>Claude &amp; MCP Automation</h3><div class="level">Expert</div></div>
+        </div>
+        <div class="meter"><span style="width:94%"></span></div>
+        <div class="tags"><span class="tag">Claude Code</span><span class="tag">Claude models</span><span class="tag">MCP integrations</span><span class="tag">LLM-assisted test generation</span><span class="tag">Self-healing automation</span></div>
+      </div>
+      <div class="skill">
+        <div class="skill-top">
+          <div class="icon"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H9l-5 4z"/></svg></div>
+          <div><h3>Team Tools &amp; Bots</h3><div class="level">Advanced</div></div>
+        </div>
+        <div class="meter"><span style="width:85%"></span></div>
+        <div class="tags"><span class="tag">Slack Block Kit bots</span><span class="tag">Notion / ClickUp automation</span><span class="tag">Jira sprints</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Work Experience</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="timeline">
+      <div class="job">
+        <div class="job-card">
+          <div class="when">Feb 2025 – Nov 2026 · Vancouver, BC (Remote)</div>
+          <h3>Staff QA Engineer</h3>
+          <div class="org">Fortis Games · Platform / Central QA</div>
+          <ul>
+            <li>Sole QA architect for a cloud-native services platform across 15+ microservices</li>
+            <li>Built API backward-compatibility lanes, mobile ads and IAP automation, performance testing, and compliance gates</li>
+            <li>Built pipelines and developer tooling, ran sprint and release sign-off in Jira, and supported UAT across environments</li>
+          </ul>
+          <span class="pill">💰 Impact: every platform feature is gated before it reaches 5+ game teams</span>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-card">
+          <div class="when">Jul 2024 – Dec 2024 · Vancouver, BC</div>
+          <h3>Senior QA Automation Developer</h3>
+          <div class="org">BC Registries, Government of British Columbia</div>
+          <ul>
+            <li>Cypress and TypeScript framework for a legacy-to-modern migration</li>
+            <li>Parallelized Azure DevOps pipelines and k6 load testing with Grafana dashboards</li>
+          </ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-card">
+          <div class="when">Jan 2021 – Jun 2024 · Vancouver, BC</div>
+          <h3>Lead Software Developer, Quality</h3>
+          <div class="org">Unity Technologies</div>
+          <ul>
+            <li>Led QA on three client projects across game commerce, digital twins, and AR social</li>
+            <li>Built GitHub Actions, Jenkins, and Unity Cloud Build pipelines, and managed release distribution</li>
+            <li>Mentored interns and guided them to write tests for new features</li>
+          </ul>
+          <span class="pill">💰 Impact: developers got Playmode results on every build</span>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-card">
+          <div class="when">May 2020 – Dec 2020 · Vancouver, BC</div>
+          <h3>SDET</h3>
+          <div class="org">Global Relay Communications</div>
+          <ul><li>Test automation for Kubernetes-hosted Java microservices with REST, Thrift, and Kafka messaging</li></ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-card">
+          <div class="when">Feb 2019 – Apr 2020 · Vancouver, BC</div>
+          <h3>Test Automation Developer</h3>
+          <div class="org">TD Bank</div>
+          <ul><li>Java and RestAssured API framework plus Selenium UI automation, integrated with Jenkins</li></ul>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-card">
+          <div class="when">Jul 2015 – Jan 2018 · Toronto / Hyderabad</div>
+          <h3>Application Development Analyst</h3>
+          <div class="org">Cigna Health Insurance</div>
+          <ul>
+            <li>Developed a .NET MVC report-validation web application, my start as a software developer</li>
+            <li>Built Selenium and Cucumber test suites and demonstrated RPA (Blue Prism) for insurance workflows</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Projects Delivered</h2>
+      <p>Projects with what I built and the impact.</p>
+      <div class="bar"></div>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="filter" data-filter="ai">AI &amp; Tooling</button>
+      <button class="filter active" data-filter="all">All</button>
+      <button class="filter" data-filter="api">API &amp; Performance</button>
+      <button class="filter" data-filter="mobile">Mobile &amp; Ads</button>
+      <button class="filter" data-filter="data">Observability</button>
+      <button class="filter" data-filter="compliance">Compliance</button>
+    </div>
+    <div class="projects">
+
+      <article class="project highlight" data-cat="api">
+        <div class="kicker">API backward compatibility</div>
+        <h3>Compatibility lanes for the production client</h3>
+        <p>Tested the shipped game client against dev and every staging backend, so backend changes that break released clients are caught early.</p>
+        <ul>
+          <li>Retro Daily E2E runs the production client against dev every day</li>
+          <li>Retro RC E2E runs it against each staging backend deploy</li>
+          <li>Slack drift warning when staging is not on the latest release backend</li>
+          <li>Fixes back-ported to the 0.19 and 0.20 release branches</li>
+        </ul>
+        <span class="pill">💰 Impact: backend changes checked daily and on every staging deploy</span>
+        <div class="tags"><span class="tag">E2E</span><span class="tag">Compatibility testing</span><span class="tag">Slack reporting</span><span class="tag">CI/CD</span></div>
+      </article>
+
+      <article class="project" data-cat="api">
+        <div class="kicker">Performance testing</div>
+        <h3>k6 load tests and frame-rate checks</h3>
+        <p>Performance coverage for the platform's APIs and for the game on real devices.</p>
+        <ul>
+          <li>k6 load tests for every API covered on the platform</li>
+          <li>Frames-per-second checks on Sauce Labs across different devices</li>
+          <li>Postman used to validate schemas and payloads before automating</li>
+        </ul>
+        <div class="tags"><span class="tag">k6</span><span class="tag">Postman</span><span class="tag">Sauce Labs</span><span class="tag">Grafana</span></div>
+      </article>
+
+      <article class="project" data-cat="api">
+        <div class="kicker">Test automation platform</div>
+        <h3>Multi-platform test automation monorepo</h3>
+        <p>One TypeScript monorepo covering backend APIs, web, and mobile.</p>
+        <ul>
+          <li>6 packages, 83 spec files, 374 tests, built over 14 months</li>
+          <li>WebdriverIO and Mocha for API, Playwright (with MCP) for web, Appium on Sauce Labs for mobile</li>
+          <li>Published typed API client packages to a private registry for reuse</li>
+        </ul>
+        <span class="pill">💰 Impact: one shared framework for 15+ services</span>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">WebdriverIO</span><span class="tag">Playwright</span><span class="tag">Appium</span><span class="tag">Lerna</span></div>
+      </article>
+
+      <article class="project" data-cat="mobile">
+        <div class="kicker">Mobile and monetization</div>
+        <h3>Ads and in-app purchase testing on real devices</h3>
+        <p>Automated rewarded-ad and purchase checks on a private Android device, so ad and billing problems show up before release.</p>
+        <ul>
+          <li>Nightly run covers two rewarded-ad placements, reward verification, and the purchase flow through to Google Play</li>
+          <li>Fail-fast handling when an age-verification page blocks the run</li>
+          <li>Found and fixed a dead dev Android ad unit</li>
+        </ul>
+        <span class="pill">💰 Impact: findings went to Play Console, consent, and analytics owners</span>
+        <div class="tags"><span class="tag">Appium</span><span class="tag">Sauce Labs</span><span class="tag">Google Play</span><span class="tag">AppLovin MAX</span><span class="tag">Firebase</span></div>
+      </article>
+
+      <article class="project" data-cat="data">
+        <div class="kicker">Observability</div>
+        <h3>Telemetry monitoring and event validation</h3>
+        <p>Monitors analytics events across 8 games and flags rejection spikes early.</p>
+        <ul>
+          <li>Monitoring service that checks ClickHouse over rolling 4-hour windows, with configurable rejection thresholds</li>
+          <li>Slack digests routed to game-specific channels</li>
+          <li>4-step shift-left workflow that catches schema mismatches 2–3 weeks earlier</li>
+        </ul>
+        <span class="pill">💰 Impact: about 50% fewer post-integration event bugs</span>
+        <div class="tags"><span class="tag">ClickHouse</span><span class="tag">Singular</span><span class="tag">Slack Block Kit</span><span class="tag">Grafana</span><span class="tag">Hex</span></div>
+      </article>
+
+      <article class="project" data-cat="compliance">
+        <div class="kicker">Privacy compliance</div>
+        <h3>GDPR, DSAR, and consent validation</h3>
+        <p>Automated checks that privacy requests and consent rules work before anything ships.</p>
+        <ul>
+          <li>Production DSAR workflow creates a test player, triggers a deletion, and verifies completion across 5 downstream systems</li>
+          <li>OneTrust OAuth2 orchestration with adaptive polling, run on a weekday schedule</li>
+          <li>COPPA and GDPR consent gate for push that blocks release on failure</li>
+        </ul>
+        <span class="pill">💰 Impact: deletion requests verified end to end every weekday</span>
+        <div class="tags"><span class="tag">OneTrust</span><span class="tag">GDPR</span><span class="tag">COPPA</span><span class="tag">OAuth2</span></div>
+      </article>
+
+      <article class="project" data-cat="ai">
+        <div class="kicker">AI-driven QA</div>
+        <h3>Claude Code agents and QA tooling</h3>
+        <p>Agents and skills that cut repetitive QA work and help teams adopt AI tooling.</p>
+        <ul>
+          <li>Test authoring agent from branch to spec, PR, CI monitoring, and triage</li>
+          <li>Handoff skill that turns tickets and specs into a ClickUp test-plan hierarchy</li>
+          <li>Slack ops bot that classifies requests and routes them to the right team</li>
+        </ul>
+        <span class="pill">💰 Impact: standardized feature handoff to 5+ game teams</span>
+        <div class="tags"><span class="tag">Claude Code</span><span class="tag">Playwright MCP</span><span class="tag">ClickUp</span><span class="tag">Slack bots</span></div>
+      </article>
+
+      <article class="project" data-cat="ai">
+        <div class="kicker">Developer pipelines</div>
+        <h3>CI pipelines and developer support</h3>
+        <p>Built the pipelines and test tooling engineers used day to day, at Unity and Fortis.</p>
+        <ul>
+          <li>Fortis: 8 GitHub Actions pipelines with OIDC auth, matrix builds, and scheduled runs</li>
+          <li>Unity: Playmode tests on every build via GitHub Actions, results posted to Slack</li>
+          <li>Unity: dedicated QA build with C# defines to test without credential dependencies</li>
+        </ul>
+        <div class="tags"><span class="tag">GitHub Actions</span><span class="tag">Jenkins</span><span class="tag">Unity Cloud Build</span><span class="tag">Slack</span></div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Education &amp; Certifications</h2>
+      <div class="bar"></div>
+    </div>
+    <div class="skill-grid">
+      <div class="skill">
+        <h3 style="font-size:17px">Bachelor of Technology</h3>
+        <div class="level">Electronics &amp; Communications Engineering · JNTUH, Hyderabad · 2011–2015</div>
+      </div>
+      <div class="skill">
+        <h3 style="font-size:17px">Machine Learning</h3>
+        <div class="level">Stanford University / Coursera (Prof. Andrew Ng)</div>
+      </div>
+      <div class="skill">
+        <h3 style="font-size:17px">Kubernetes &amp; Docker</h3>
+        <div class="level">LinkedIn Learning</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Let's Work Together</h2>
+      <div class="bar"></div>
+    </div>
+    <p class="lead">I'm open to Staff and SDET roles in QA automation, test platform engineering, and quality leadership, in Canada or the US.</p>
+    <div class="btns">
+      <a class="btn primary" href="mailto:vishnuvardhan0422@gmail.com">Send Email</a>
+      <a class="btn" href="https://www.linkedin.com/in/vishnu-patlolla22/">LinkedIn</a>
+      <a class="btn" href="Vishnu_Patlolla_Resume.pdf">Resume (PDF)</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Vishnu Patlolla. All rights reserved.</span>
+    <span>Hosted on GitHub Pages</span>
+  </div>
+</footer>
+
+<script>
+  const buttons = document.querySelectorAll('.filter');
+  const cards = document.querySelectorAll('.project');
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      buttons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(c => { c.hidden = !(f === 'all' || c.dataset.cat === f); });
+    });
+  });
+</script>
+
+</body>
+</html>
