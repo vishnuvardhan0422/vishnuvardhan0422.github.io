@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vishnu Patlolla | Resume</title>
+<style>
+  :root { --navy:#1b2a4a; --blue:#2e6fb5; --gray:#555; --rule:#2e6fb5; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #eef1f5; color: #222;
+    font-family: Calibri, Carlito, "Segoe UI", Arial, sans-serif; font-size: 10.5pt; line-height: 1.38;
+  }
+  .page {
+    max-width: 8.5in; margin: 24px auto; background: #fff; padding: 0.6in 0.65in;
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+  }
+  header { text-align: center; border-bottom: 3px solid var(--navy); padding-bottom: 10px; margin-bottom: 14px; }
+  h1 { margin: 0; font-size: 26pt; letter-spacing: .5px; color: var(--navy); font-weight: 700; }
+  .title { color: #666; font-size: 11pt; margin-top: 2px; }
+  .contact { font-size: 10pt; margin-top: 4px; color: #333; }
+  .contact a { color: var(--blue); text-decoration: none; }
+  h2 {
+    font-size: 11pt; color: var(--navy); letter-spacing: .4px; text-transform: uppercase;
+    margin: 16px 0 6px; padding-bottom: 3px; border-bottom: 1.5px solid var(--rule);
+  }
+  p { margin: 4px 0; }
+  .job { margin-top: 12px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+  .role { font-weight: 700; color: #111; font-size: 11pt; }
+  .company { color: var(--blue); font-weight: 700; }
+  .dates { color: #666; font-style: italic; font-size: 10pt; }
+  .loc { color: #666; font-style: italic; font-size: 10pt; }
+  .desc { color: #666; font-style: italic; font-size: 10pt; margin: 3px 0 4px; }
+  h3 {
+    font-size: 10.5pt; color: var(--blue); font-style: italic; font-weight: 700;
+    margin: 9px 0 2px; border-bottom: 1px dashed #cfd8e6; padding-bottom: 1px;
+  }
+  ul { margin: 2px 0 4px 18px; padding: 0; }
+  li { margin: 2px 0; }
+  li b { color: #111; }
+  .skills p { margin: 2px 0; }
+  .skills b { color: var(--navy); }
+  .edu-row { display: flex; justify-content: space-between; flex-wrap: wrap; }
+  .muted { color: #666; font-size: 10pt; }
+  @media print {
+    body { background: #fff; }
+    .page { margin: 0; box-shadow: none; padding: 0.45in 0.55in; max-width: none; }
+    h2 { break-after: avoid; }
+    h3 { break-after: avoid; }
+    .job { break-inside: auto; }
+    li { break-inside: avoid; }
+  }
+  @page { size: Letter; margin: 0; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <h1>VISHNU PATLOLLA</h1>
+  <div class="title">Staff QA Engineer · SDET · AI-Powered Quality Architect</div>
+  <div class="contact">+1 (778) 801-9142 · vishnuvardhan0422@gmail.com · <a href="https://www.linkedin.com/in/vishnu-patlolla22/">linkedin.com/in/vishnu-patlolla22</a></div>
+  <div class="contact">Vancouver, BC · Canadian Citizen · Open to US Relocation</div>
+</header>
+
+<h2>Professional Summary</h2>
+<p>Staff-level SDET and QA Engineer with 10+ years across gaming, healthcare, and financial services. Sole architect of a production-grade multi-platform test automation monorepo (TypeScript, WebdriverIO, Playwright, Appium) covering 15+ backend microservices, 8 CI/CD pipelines, and a custom ClickHouse observability service. Games-platform QA owner who validates platform features (ad monetization, push notifications, telemetry SDK, GDPR/COPPA compliance) before game-team integration, gating releases on functional and regulatory criteria and driving structured handoff to 5+ game teams. Built 25+ AI agents (Claude Code) automating test authoring, telemetry validation, and QA reporting across the organization.</p>
+
+<h2>Technical Skills</h2>
+<div class="skills">
+  <p><b>Languages:</b> TypeScript · JavaScript · Python · Java · C#</p>
+  <p><b>Frameworks &amp; Tools:</b> WebdriverIO · Playwright · Appium · Mocha/Chai · Cypress · Robot Framework · Selenium · PyTest · RestAssured</p>
+  <p><b>CI/CD &amp; Infrastructure:</b> GitHub Actions · Azure DevOps · Jenkins · Docker · Kubernetes · Sauce Labs · Lerna Monorepo</p>
+  <p><b>Data &amp; Observability:</b> ClickHouse · MongoDB · PostgreSQL · MS SQL · Grafana · Allure · Slack Block Kit</p>
+  <p><b>APIs &amp; Security:</b> REST · OAuth2/JWT · OpenAPI/Swagger · OIDC · OneTrust (GDPR/CCPA/COPPA)</p>
+  <p><b>AI &amp; Tooling:</b> Claude Code · LLM-assisted test generation · Self-healing automation · AI anomaly detection</p>
+</div>
+
+<h2>Professional Experience</h2>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Staff QA Engineer</span> | <span class="company">Fortis Games</span></span><span class="dates">Feb 2025 – Nov 2026</span></div>
+  <div class="loc">Vancouver, BC (Remote) — Platform / Central QA (cen-automation)</div>
+  <div class="desc">Sole QA architect for a cloud-native services platform powering multiple game titles. Own API test automation, mobile and end-to-end compatibility testing, telemetry pipeline validation, GDPR compliance, production observability, and AI-driven QA tooling across 15+ microservices, gating every platform feature before it reaches 5+ game teams.</div>
+
+  <h3>Test Automation Framework Architecture</h3>
+  <ul>
+    <li><b>Monorepo from zero:</b> Architected a Lerna/npm-workspaces TypeScript monorepo (6 packages, 83 spec files, 374 tests, ~14.7K LOC) spanning WebdriverIO+Mocha (API), Playwright (web), and Appium+Sauce Labs (mobile) across 15+ platform microservices; 424 commits over 14 months.</li>
+    <li><b>API client and test utilities:</b> Built the core API test framework: a packaged typed API client, a mail client for OTP and email flows, and environment-driven configuration.</li>
+    <li><b>Reusable SDK packages:</b> Published @fortis/* packages to a private Nexus registry: a typed Axios API client with Bearer-token handling, a central endpoint registry for 9 services (Terra, Sol, Forge Identity, Passport, Maelstrom, CleverTap, Schemas, Prism, OneTrust), and 25+ service helper modules.</li>
+    <li><b>End-to-end telemetry validation:</b> Built a 1,890-line data-platform E2E spec covering the full event pipeline: guest creation → sdk_sessionStart → Maelstrom funnel → Passport identity resolution → Prism segmentation → CleverTap + Singular vendor sync, with polling and direct MongoDB assertions for eventual consistency.</li>
+    <li><b>Auth optimization:</b> Designed a headless Forge login flow that caches the JWT per suite run, eliminating per-test login overhead; replaced brittle 35 s sleeps with adaptive 90 s polling for refresh-token grace-period validation.</li>
+  </ul>
+
+  <h3>API Coverage</h3>
+  <ul>
+    <li><b>Identity and players:</b> Forge identity and auth, profiles, Passport (player IDs), OTP.</li>
+    <li><b>Player lifecycle:</b> Promotion, player data, status, and deletion.</li>
+    <li><b>Content:</b> Facts API, manifest, and snapshot.</li>
+    <li><b>Compliance:</b> Agreements (Terms of Service and privacy), age-gate actions, geo-fencing and geolocation.</li>
+    <li><b>Commerce and messaging:</b> Marketplace refund states, IAP purchase validation, IGM, mailer end-to-end.</li>
+    <li><b>General:</b> Error code validation.</li>
+  </ul>
+
+  <h3>Mobile Automation: Native Ads and IAP on Sauce Labs</h3>
+  <ul>
+    <li><b>Nightly ads and IAP check:</b> WebdriverIO and Appium on a private Android device in Sauce Labs. Covers two rewarded-ad placements with reward verification, and the Buy flow through to Google Play. Slack report uses the E2E format with Sauce video links.</li>
+    <li><b>Google Play purchase flow:</b> Automated the purchase flow on the Cen Tech demo app and checked each purchase against the marketplace.</li>
+    <li><b>Ad unit and device fix:</b> Found and fixed a dead dev Android ad unit, and registered the test phone as an AppLovin test device.</li>
+    <li><b>Nightly fail-fast fix:</b> The nightly now fails fast with the cause when the K-ID age-verification page appears, reports startup failures separately, and only picks builds that still have their APK.</li>
+    <li><b>Age assurance blocker:</b> Working with the platform team on the K-ID age-verification change on dev, which currently blocks the nightly run.</li>
+    <li><b>Findings shared with other teams:</b> Google Play only sells to Play-installed builds, which shaped the purchase phase 2 plan. consent-QA parsing broke under Mobile Protect, and its R12 rule misread failed purchases. The Firebase 25-parameter limit was dropping analytics fields.</li>
+  </ul>
+
+  <h3>Platform → Game Team Feature Enablement</h3>
+  <ul>
+    <li><b>Ad monetization QA:</b> Owned AppLovin MAX mediation testing across 4 ad networks (Unity Ads, Meta, AdMob, AppLovin bidders + waterfall), verifying SDK init, per-network fill, server-side toggles, and reward-grant integrity. Defined the acceptance bar (fill &gt;95%, eCPM &gt;$8, load &lt;5 s, crash &lt;0.1%) with a per-network troubleshooting matrix.</li>
+    <li><b>Push and deep-linking sign-off:</b> Built the CleverTap production sign-off framework (35 test cases, 8 categories) covering push delivery across app states, deep-link navigation to 8+ in-game destinations, deferred deep-link queueing, and multi-device targeting.</li>
+    <li><b>Privacy compliance gate:</b> Owned the COPPA/GDPR compliance gate for push: OneTrust consent toggle, consent and permission matrix, and age-gating (US 13+, EU 16+), blocking release on any compliance failure.</li>
+    <li><b>Shift-left event validation:</b> Built a 4-step workflow (ClickHouse delivery → Hex data-quality analysis → 4-hour monitoring → Notion sign-off) that catches schema mismatches, buffering errors, and null fields 2–3 weeks earlier, cutting post-integration event bugs by ~50%.</li>
+    <li><b>Handoff automation:</b> Automated the platform-to-game-QA handoff with a Claude Code skill that reads initiative tickets, extracts Notion/Figma specs, generates a control + test-plan + bug-bucket hierarchy in ClickUp, and updates the central tracking doc, standardizing delivery of every platform feature to 5+ game teams.</li>
+  </ul>
+
+  <h3>Compatibility Testing: Mergemon</h3>
+  <ul>
+    <li><b>Retro Daily E2E:</b> Runs the production client against dev every day.</li>
+    <li><b>Retro RC E2E:</b> Runs the production client against each staging backend deploy.</li>
+    <li><b>Hardening and drift warning:</b> Fixed misleading results, and added a Slack warning when staging is not running the latest release backend.</li>
+    <li><b>Release-branch back-ports:</b> Back-ported the fixes to the 0.19 and 0.20 release branches.</li>
+    <li><b>Daily E2E reporting:</b> Redesigned the Slack summary layout. Every failure is reported, including setup crashes.</li>
+    <li><b>Play-through stability:</b> Stabilized 0.20 onboarding flows and tutorial flows (Ember hold, Sanctuary quest entrance, collection gift, Rescuemon merge), and fixed Village overlap recovery and the Residents curtain wait.</li>
+    <li><b>E2E coverage and infrastructure:</b> Added coverage for settings legal links, and a Data Import lane for moving bundles between environments.</li>
+  </ul>
+
+  <h3>CI/CD Pipelines and Production Observability</h3>
+  <ul>
+    <li><b>8 GitHub Actions pipelines:</b> API E2E, web E2E, data-platform journey, passport smoke, PROD health, DSAR validation, and ClickHouse monitoring, with OIDC auth, GitHub App tokens, matrix builds, off-peak cron scheduling, and secret validation.</li>
+    <li><b>API framework CI and reporting:</b> GitHub Actions workflows run daily or twice daily, with manual inputs. Slack Block Kit reports @-mention owners on failures. Diagnosed and fixed a bug that was miscounting retried tests in CI summaries.</li>
+    <li><b>Production health checks:</b> Per-game PROD health workflow (gameId input) that checks production services and logs each URL. Built a 17-spec read-only PROD smoke suite with Slack reporting.</li>
+    <li><b>ClickHouse anomaly detection:</b> Built a 955-line monitoring service that runs daily across 8 games (Lotus, Onyx, Parachute, Bishop, Fusebound, Flux, Hyperlight, Octopus). It computes rejection-ratio thresholds over rolling 4-hour windows and posts Slack Block Kit digests to game-specific channels, with central alert routing and skips for apps without Slack setup.</li>
+  </ul>
+
+  <h3>GDPR / DSAR Compliance Automation</h3>
+  <ul>
+    <li><b>Production validation workflow:</b> Built a PROD DSAR/OneTrust GDPR workflow that creates a real player, triggers a deletion request, and verifies fan-out completion across 5 downstream systems via OneTrust OAuth2 orchestration and adaptive polling. Runs on a weekday CI schedule with a Slack report.</li>
+  </ul>
+
+  <h3>AI-Driven QA Tooling (25+ Claude Code Agents)</h3>
+  <ul>
+    <li><b>Test authoring agent:</b> Built api-test-writer-v2, an 11-step guided agent that walks engineers from branch creation → spec authoring → PR → CI monitoring and failure triage, with auth-pattern handling and coding-standard enforcement.</li>
+    <li><b>Self-serve telemetry inspection:</b> Built a Claude Code skill that queries ClickHouse directly, auto-resolves player IDs and time ranges, runs spec-vs-actual data-quality analysis, cross-references known ClickUp bugs, and exports CSVs. Used across 10+ game projects.</li>
+    <li><b>Platform ops Slack bot:</b> Shipped a Socket Mode Slack bot that classifies platform-engineering requests, auto-creates ClickUp tickets, routes them to the correct POD, and posts interactive daily digests. Remediated SAST findings (path-traversal, Cycode/Datadog).</li>
+    <li><b>Adoption and measurement:</b> Built meta-skills (growth-scanner, session-review, weekly-qa-ai-updates) to measure and grow AI-tooling adoption across the QA team. Authored the Spire Telemetry QA Test Plan (8 Notion sub-pages), adopted as the Data team's official handoff to game teams.</li>
+  </ul>
+
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Senior QA Automation Developer</span> | <span class="company">BC Registries — Government of British Columbia</span></span><span class="dates">Jul 2024 – Dec 2024</span></div>
+  <div class="loc">Vancouver, BC</div>
+  <ul>
+    <li><b>Framework development:</b> Built an end-to-end Cypress + TypeScript automation framework covering API and UI tests for a legacy-to-modern platform migration; extended coverage with Python/Robot Framework suites.</li>
+    <li><b>Pipeline and performance:</b> Implemented parallelized Azure DevOps pipelines to cut build times; executed k6 load testing to benchmark throughput and latency under peak loads; generated Grafana/Azure dashboards for stakeholders.</li>
+    <li><b>AI-augmented testing:</b> Applied self-healing locators and LLM-assisted test-script generation to increase framework robustness and accelerate delivery.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Lead Software Developer, Quality</span> | <span class="company">Unity Technologies</span></span><span class="dates">Jan 2021 – Jun 2024</span></div>
+  <div class="loc">Vancouver, BC</div>
+  <div class="desc">Led QA across 3 client-facing projects over 3.5 years, spanning game commerce, digital twins, and AR social. Owned automation strategy, mobile CI/CD, release management, and team mentorship.</div>
+
+  <h3>Walmart — Unity Game Commerce Integration (iOS / Android)</h3>
+  <ul>
+    <li><b>Custom SDK testing:</b> Developed an automated test suite for a Unity package that redirected in-game users to Walmart for shopping, targeting both iOS and Android builds via Unity's internal test tooling.</li>
+    <li><b>API automation:</b> Built a RestAssured + Java framework to test REST APIs deployed on Google Cloud; configured pipeline-scheduled runs to validate API contracts on a regular interval.</li>
+    <li><b>QA build enablement:</b> Collaborated with developers to create a dedicated QA build using C# defines to skip authentication, enabling test execution on local machines and QA VMs without credential dependencies.</li>
+    <li><b>CI pipeline:</b> Set up GitHub Actions to execute Playmode automated tests on every new build and post results to Slack, establishing a continuous feedback loop for the development team.</li>
+  </ul>
+
+  <h3>YVR Airport — Unity Digital Twin (iOS / Windows)</h3>
+  <ul>
+    <li><b>Team lead:</b> Led a QA team developing automated tests using GameDriver IO for a Unity-based digital twin application running on iOS and Windows devices for Vancouver International Airport.</li>
+    <li><b>Automation strategy:</b> Created a comprehensive test plan to replace manual regression execution with automated runs for regular builds, delivering the full regression suite within the committed timeframe.</li>
+    <li><b>Nightly CI pipeline:</b> Set up a Jenkins nightly job to execute UI tests on the Windows executable build on a dedicated QA VM, with results distributed via Outlook and Microsoft Teams.</li>
+  </ul>
+
+  <h3>GUM — Augmented Reality Social App (Gen-Z)</h3>
+  <ul>
+    <li><b>Mobile UI automation:</b> Built automated UI tests for the iOS mobile app using Appium and Unity's internal testing package, enabling repeatable regression testing on every release candidate.</li>
+    <li><b>Release management:</b> Served as Release Manager. Set up CI/CD using Unity Cloud Build and distributed builds via Apple TestFlight and Microsoft AppCenter.</li>
+    <li><b>Cross-functional collaboration:</b> Partnered with Designers and User Research teams to integrate early customer feedback into the testing strategy, validating app experience before formal QA cycles.</li>
+    <li><b>Mentorship:</b> Mentored interns and guided them to implement tests for new features, including early testing on feature branches before merge, raising overall team velocity and test coverage.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">SDET</span> | <span class="company">Global Relay Communications</span></span><span class="dates">May 2020 – Dec 2020</span></div>
+  <div class="loc">Vancouver, BC</div>
+  <ul>
+    <li><b>Microservices testing:</b> Developed test automation for Kubernetes-deployed Java microservices handling REST, Thrift, and Kafka messaging; executed performance tests and maintained QA environment deployments via Docker/Kubernetes.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Test Automation Developer</span> | <span class="company">TD Bank</span></span><span class="dates">Feb 2019 – Apr 2020</span></div>
+  <div class="loc">Vancouver, BC</div>
+  <ul>
+    <li><b>Full-stack test framework:</b> Built a Java/RestAssured API + Selenium UI automation framework for the Wealth Data Strategy platform; integrated with Jenkins pipelines and Extent Reports for automated test reporting.</li>
+  </ul>
+</div>
+
+<div class="job">
+  <div class="job-head"><span><span class="role">Application Development Analyst</span> | <span class="company">Cigna Health Insurance</span></span><span class="dates">Jul 2015 – Jan 2018</span></div>
+  <div class="loc">Toronto / Hyderabad</div>
+  <ul>
+    <li><b>QA and development:</b> Developed a .NET MVC report-validation web application and Selenium/Cucumber test suites; demonstrated RPA (Blue Prism) feasibility for insurance workflow automation.</li>
+  </ul>
+</div>
+
+<h2>Education</h2>
+<div class="edu-row"><span><b>Bachelor of Technology, Electronics &amp; Communications Engineering</b><br><span class="muted">JNTUH, Hyderabad</span></span><span class="dates">2011 – 2015</span></div>
+
+<h2>Certifications</h2>
+<p><b>Machine Learning</b>, Stanford University / Coursera (Prof. Andrew Ng)</p>
+<p><b>Kubernetes &amp; Docker</b>, LinkedIn Learning</p>
+
+</div>
+</body>
+</html>
